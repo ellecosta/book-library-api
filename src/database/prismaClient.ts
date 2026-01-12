@@ -1,4 +1,3 @@
-// src/database/prismaClient.ts
 import pkg from "@prisma/client";
 const { PrismaClient } = pkg;
 

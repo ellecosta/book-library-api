@@ -10,7 +10,7 @@ generator client {
 
 // Datasource sem URL
 datasource db {
-  provider = "sqlite"   // ou "postgresql" quando tiver o banco real
+  provider = "postgresql" 
 }
 
 model User {
