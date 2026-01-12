@@ -6,3 +6,5 @@ export const CreateUserSchema = z.object({
     password: z.string().min(8, "Password must have at least 8 characters"),
     role: z.enum(["admin", "user"])
 });
+
+export type CreateUserDTO = z.infer<typeof CreateUserSchema>;
