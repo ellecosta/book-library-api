@@ -1,5 +1,5 @@
-import type { User as PrismaUser} from "@prisma/client";
-import { UserType } from "../types/user.types"
+import type { User as PrismaUser} from '../generated/prisma/client'
+import { UserType, Role } from "../types/user.types"
 
 export class UserMapper {
     static mapSchemaToEntity(data: PrismaUser): UserType {
@@ -7,7 +7,7 @@ export class UserMapper {
             id: data.id,
             name: data.name,
             email: data.email, 
-            role: data.role,
+            role: data.role as Role,
         }
     }
 }

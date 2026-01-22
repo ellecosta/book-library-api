@@ -14,7 +14,7 @@ export class UserController {
         try {
             const data = CreateUserSchema.parse(req.body);
             const user = await userService.create(data);
-            return res.status(201).json(user);
+            return res.status(200).json(user);
         } catch (err) {
             next(err);
         }
@@ -22,7 +22,7 @@ export class UserController {
 
     static async getById(req: Request, res: Response, next: NextFunction) {
         try {
-            const { id } = IdParamSchema.parse(req.body);
+            const { id } = IdParamSchema.parse(req.params);
             const user = await userService.findById(id);
             return res.status(200).json(user);
         } catch (err) {
