@@ -6,3 +6,7 @@ export interface UserType {
     email: string;
     role: Role;
 }
+
+export interface RequestUser {
+    role: Role;
+}
