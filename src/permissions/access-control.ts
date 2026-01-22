@@ -10,6 +10,5 @@ ac.grant("admin")
 
 ac.grant("user")
   .readOwn("user")
-  .createAny("user")
   .updateOwn("user")
   .deleteOwn("user");

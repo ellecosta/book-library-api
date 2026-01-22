@@ -13,7 +13,7 @@ router.post(
     UserController.create
 );
 
-router.put(
+router.patch(
     "/user/:id", 
     authMiddleware,
     authorize("update", "user", "own"),
